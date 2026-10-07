@@ -33,10 +33,8 @@ search_provider: lunr
 # ---------- 首页分页（jekyll-paginate 为 GitHub Pages 白名单插件） ----------
 paginate: 10
 paginate_path: /page:num/
-
-# ---------- 插件（均为 GitHub Pages 白名单插件，自动可用） ----------
-plugins:
-  - jekyll-include-cache
+# 注：白名单插件（jekyll-feed / jekyll-sitemap / jekyll-paginate / jekyll-include-cache 等）
+# 由 GitHub Pages 自动加载，无需也不应在此显式声明 plugins，否则会限制其他插件
 
 # ---------- 页面/文章默认布局 ----------
 defaults:
