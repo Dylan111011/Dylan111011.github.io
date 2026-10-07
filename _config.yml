@@ -1,3 +1,77 @@
-remote_theme: cotes2020/jekyll-theme-chirpy
-title: Dylan的个人博客
-description: 随笔与技术记录
+# ============================================================
+# Dylan 的个人博客 - 站点配置
+# 主题：Minimal Mistakes（通过 remote_theme，GitHub Pages 原生支持）
+# 主题文档：https://mmistakes.github.io/minimal-mistakes/
+# ============================================================
+
+remote_theme: "mmistakes/minimal-mistakes@4.28.1"
+
+# ---------- 站点基本信息 ----------
+title: "Dylan的个人博客"
+name: "Dylan"
+description: "随笔与技术记录"
+url: "https://dylan111011.github.io"
+timezone: "Asia/Shanghai"
+locale: "zh-CN"                    # 界面语言（导航按钮、提示语等会显示为中文）
+
+# ---------- 主题外观 ----------
+# 可选皮肤: default / dark / dirt / mint / neon / plum / sunrise
+minimal_mistakes_skin: "default"
+
+# 文章链接格式：/年/月/日/标题/
+permalink: /:year/:month/:day/:title/
+
+# ---------- Markdown ----------
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# ---------- 站内搜索 ----------
+search: true
+search_provider: lunr
+
+# ---------- 首页分页（jekyll-paginate 为 GitHub Pages 白名单插件） ----------
+paginate: 10
+paginate_path: /page:num/
+
+# ---------- 插件（均为 GitHub Pages 白名单插件，自动可用） ----------
+plugins:
+  - jekyll-include-cache
+
+# ---------- 页面/文章默认布局 ----------
+defaults:
+  # 所有普通页面
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  # 所有文章（_posts 目录）
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true              # 显示阅读时长
+      show_date: true              # 显示发布日期
+      share: true                  # 显示分享按钮
+      related: true                # 显示相关文章
+      comments: false
+
+# ---------- 侧边栏作者信息 ----------
+author:
+  name: "Dylan"
+  bio: "随笔与技术记录"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github-square"
+      url: "https://github.com/Dylan111011"
+
+# ---------- 页脚 ----------
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github-square"
+      url: "https://github.com/Dylan111011"
